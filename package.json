@@ -1,0 +1,19 @@
+{
+  "name": "slack-private-export",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "prettier": {
+    "singleQuote": true
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "dayjs": "^1.8.16",
+    "dotenv": "^8.1.0",
+    "slack": "^11.0.2"
+  }
+}

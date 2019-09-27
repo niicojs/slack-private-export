@@ -1,0 +1,6 @@
+/bin
+/node_modules
+
+/.env
+/export
+/export-private.zip

@@ -5,6 +5,7 @@
   "main": "bin/index.js",
   "bin": "bin/index.js",
   "scripts": {
+    "compile": "tsc",
     "pkg": "pkg -t node12-win --out-path binaries ."
   },
   "keywords": [],

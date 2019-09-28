@@ -19,8 +19,7 @@ jobs:
         npm run compile
         npm run pkg
     - uses: actions/upload-artifact@master
-        with:
-          name: binaries
-          path: binaries
-      env:
-        CI: true
+      with:
+        name: binaries
+        path: binaries
+

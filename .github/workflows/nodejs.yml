@@ -18,8 +18,7 @@ jobs:
       run: |
         npm run compile
         npm run pkg
-    - name: upload artifact
-      uses: actions/upload-artifact@v1
+    - uses: actions/upload-artifact@master
         with:
           name: binaries
           path: binaries

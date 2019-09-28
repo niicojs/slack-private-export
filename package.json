@@ -2,8 +2,11 @@
   "name": "slack-private-export",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {},
+  "main": "bin/index.js",
+  "bin": "bin/index.js",
+  "scripts": {
+    "pkg": "pkg -t node12-win --out-path binaries ."
+  },
   "keywords": [],
   "author": "",
   "license": "MIT",

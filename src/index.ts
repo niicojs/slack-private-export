@@ -29,12 +29,17 @@ const getUSers = async token => {
 
 (async () => {
   console.log('Starting...');
+  const token = process.env.LEGACY_TOKEN;
+  if (!token) {
+    console.log('LEGACY_TOKEN not found. Configure first');
+    return;
+  }
+
   try {
     await fs.promises.mkdir('export');
   } catch (e) {}
 
   const today = dayjs().format('YYYY-MM-DD');
-  const token = process.env.LEGACY_TOKEN;
   const conversations = await Slack.conversations.list({
     token,
     types: 'public_channel,private_channel'

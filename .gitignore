@@ -2,5 +2,6 @@
 /node_modules
 
 /.env
+/binaries
 /export
 /export-private.zip

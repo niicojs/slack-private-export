@@ -1,4 +1,4 @@
-name: Package
+name: Build
 on: [push]
 
 jobs:
@@ -18,8 +18,14 @@ jobs:
       run: |
         npm run compile
         npm run pkg
-    - uses: actions/upload-artifact@master
+    - name: artifact
+      uses: actions/upload-artifact@master
       with:
         name: binaries
         path: binaries
-
+    - name: release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: binaries/*
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

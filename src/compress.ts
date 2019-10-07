@@ -13,5 +13,5 @@ export default async (folder, dest) => {
       await zip.addLocalFile(path.join(folder, file));
     }
   }
-  return zip.writeZip(dest);
+  return await zip.writeZip(dest);
 };
